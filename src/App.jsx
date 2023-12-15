@@ -5,9 +5,9 @@ import { ReklamaBolimi } from './pages/ReklamaBo\'limi'
 
 export const App = () => {
   return (
-    <Container >
+    <Box >
       <Header/>
       <ReklamaBolimi/>
-    </Container>
+    </Box>
   )
 }
