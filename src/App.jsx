@@ -1,11 +1,13 @@
 import React from 'react'
 import { Header } from './pages/Header'
 import { Box, Container } from '@chakra-ui/react'
+import { ReklamaBolimi } from './pages/ReklamaBo\'limi'
 
 export const App = () => {
   return (
-    <Container maxW={'1260px'}m={'0 auto'}>
+    <Container >
       <Header/>
+      <ReklamaBolimi/>
     </Container>
   )
 }

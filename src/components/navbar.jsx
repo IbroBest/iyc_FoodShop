@@ -6,7 +6,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 export const Navbar = () => {
   return (
     <Box bg={"#FFFFFF"}>
-      <Container maxW={"1260px"} m={"0 auto"}>
+      <Container   >
         {/* birinchi bolaki  */}
         <Box my={"17px"}>
           <Box display={"flex"} alignItems={"center"}justifyContent={'space-between'}>

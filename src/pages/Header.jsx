@@ -1,6 +1,7 @@
 import { Box, Button, Container, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 import { Navbar } from "../components/navbar";
+import Carousel from "../components/carousel";
 
 const elements = [
   {id:1, name:'pizza'},
@@ -15,7 +16,7 @@ const elements = [
 
 export const Header = () => {
   return (
-    <Box>
+    <Box w={'100%'} maxW={'1260px'}m={'0 auto'} bg={''}>
       <Navbar />
       <hr />
       <Container maxW={"1260px"} m={"0 auto"}>
