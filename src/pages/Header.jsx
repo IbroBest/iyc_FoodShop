@@ -48,7 +48,7 @@ export const Header = () => {
 
         <hr />
         <Box  mt={"26px"} display={"flex"} justifyContent={"space-between"} >
-            <DrawerMenu/>
+            <DrawerMenu />
           <Button border={"1px solid #220a4e"}bg={"#2E1066"}color={"white"}_hover={{background: "none",border: "1px solid #2E1066",color: "#1B1D1F",}}padding={"12px 20px"}>Все категории</Button>
           <Box display={{base:'none',lg:"flex"}}alignItems={"center"}w={"70%"}justifyContent={"space-around"}>
             {elements.map((item) => (
