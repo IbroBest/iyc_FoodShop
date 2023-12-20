@@ -4,7 +4,7 @@ import hamburgerIcon from '../assets/icons/hamburberIcon.svg'
 
 export const DrawerMenu = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [placement, setPlacement] = React.useState('right')
+    const [placement, setPlacement] = React.useState('left')
 
 
     const elements = [
@@ -17,7 +17,7 @@ export const DrawerMenu = () => {
       { id: 7, name: "kartoshka fri" },
     ];
   return (
-    <Box>
+    <Box display={{base:'block',lg:'none'}}>
       <RadioGroup defaultValue={placement} onChange={setPlacement}>
       </RadioGroup>
       <Button onClick={onOpen} bg={'black'}_hover={{opacity:'0.8'}}>

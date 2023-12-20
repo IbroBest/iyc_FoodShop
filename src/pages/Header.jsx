@@ -4,11 +4,15 @@ import {
   Container,
   HStack,
   Heading,
+  Image,
   Input,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
 import { DrawerMenu } from "../components/DrawerMenu";
+import location from '../assets/icons/location.svg'
+import call from '../assets/icons/call.svg'
+import person from '../assets/icons/person.svg'
 
 const elements = [
   { id: 1, name: "pizza" },
@@ -27,19 +31,19 @@ export const Header = () => {
         <Box my={"17px"}>
           <Box display={"flex"}alignItems={"center"}justifyContent={"space-between"}>
             <Heading color={"#ff4600"}>Fast food.uz</Heading>
-            <Input w={"430px"} placeholder="find the food " />
+            <Input w={"400px"} placeholder="find the food " />
+          <Box display={{base:'none',lg:'flex'}}  gap={'20px'}alignItems={'center'}>
+
             <Box>
-              {/* <Image src={''}/> */}
-              <Text className="phoneNumber" fontSize={"17px"}> uzbekistan</Text>
+              <div className="phoneNumber"><Image src={location}/> uzbekistan</div>
             </Box>
             <Box>
-              {/* <Image src={''}/> */}
-              <Heading className="phoneNumber"  fontSize={"17px"}> +998 88-602-47-77</Heading>
+              <div className="phoneNumber"><Image src={call}/> +99888-602-47-77</div>
             </Box>
             <Box>
-              {/* <Image src={''}/> */}
-              <Text display={{base:'none',lg:'flex'}} fontSize={"17px"}> Вход  /  Регистрация</Text>
+              <Box display={'flex'}><Image src={person}/> Вход  /  Регистрация</Box>
             </Box>
+          </Box>
           </Box>
         </Box>
 
@@ -48,7 +52,7 @@ export const Header = () => {
 
         <hr />
         <Box  mt={"26px"} display={"flex"} justifyContent={"space-between"} >
-            <DrawerMenu />
+          <DrawerMenu />
           <Button border={"1px solid #220a4e"}bg={"#2E1066"}color={"white"}_hover={{background: "none",border: "1px solid #2E1066",color: "#1B1D1F",}}padding={"12px 20px"}>Все категории</Button>
           <Box display={{base:'none',lg:"flex"}}alignItems={"center"}w={"70%"}justifyContent={"space-around"}>
             {elements.map((item) => (
