@@ -17,7 +17,7 @@ export const DrawerMenu = () => {
       { id: 7, name: "kartoshka fri" },
     ];
   return (
-    <Box display={}>
+    <Box>
       <RadioGroup defaultValue={placement} onChange={setPlacement}>
       </RadioGroup>
       <Button onClick={onOpen} bg={'black'}_hover={{opacity:'0.8'}}>
