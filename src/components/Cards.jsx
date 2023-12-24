@@ -19,7 +19,7 @@ const cards = [
 export const Cards = () => {
   return (
     <Box mt={'40px'}>
-        <Box display={'flex'} flexDirection={'column'}>
+        <Box display={{base:'none',md:'flex'}} flexDirection={'column'}>
             <Box display={'flex'}>
                 {cards.slice(0,3).map((item)=>(
 
@@ -62,6 +62,26 @@ export const Cards = () => {
 
             </Box>
         </Box>
+        <Box display={{base:'flex',md:'none'}} flexDirection={'column'}>
+                {cards.map((item)=>(
+                <Box alignItems={'center'} display={'flex'}gap={'35px'} border={'1px solid red'} w={'100%'}h={'100px'} padding={'28px'}>
+                    <Image w={'60px'}h={'60px'} src={one}/>
+                    <Box textAlign={'start'}>
+                        <Heading fontWeight={'500'}fontSize={'22px'}>{item.title}</Heading>
+                        <Text color={'grey'}>{item.desc}</Text>
+                     </Box>                    
+                </Box>))}
+            </Box>
     </Box>
   )
 }
+{/* <Box display={'flex'} flexDirection={'column'}>
+                {cards.map((item)=>(
+                <Box alignItems={'center'} display={'flex'}gap={'35px'} border={'1px solid red'} w={'100%'}h={'100px'} padding={'28px'}>
+                    <Image w={'60px'}h={'60px'} src={one}/>
+                    <Box textAlign={'start'}>
+                        <Heading fontWeight={'500'}fontSize={'22px'}>{item.title}</Heading>
+                        <Text color={'grey'}>{item.desc}</Text>
+                     </Box>                    
+                </Box>))}
+            </Box> */}

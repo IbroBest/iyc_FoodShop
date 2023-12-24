@@ -18,24 +18,25 @@ export default class Carousel extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+
     };
 
     return (
       <Box mt={'50px'}>
         <Slider {...settings}>
-          <Box width={"100%"} height={"500px"}>
+          <Box width={"100%"} height={{base:'300px',md:"500px"}}>
             <Image borderRadius={'30px'} src={pizza} h={"100%"} w={"100%"} objectFit={"cover"} />
           </Box>
-          <Box width={"100%"} height={"500px"}>
+          <Box width={"100%"} height={{base:'300px',md:"500px"}}>
             <Image borderRadius={'30px'} src={burger} h={"100%"} w={"100%"} objectFit={"cover"} />
           </Box>
-          <Box width={"100%"} height={"500px"}>
+          <Box width={"100%"} height={{base:'300px',md:"500px"}}>
             <Image borderRadius={'30px'} src={sandwich} h={"100%"} w={"100%"} objectFit={"cover"} />
           </Box>
-          <Box width={"100%"} height={"500px"}>
+          <Box width={"100%"} height={{base:'300px',md:"500px"}}>
             <Image borderRadius={'30px'} src={fri} h={"100%"} w={"100%"} objectFit={"cover"} />
           </Box>
-          <Box width={"100%"} height={"500px"}>
+          <Box width={"100%"} height={{base:'300px',md:"500px"}}>
             <Image borderRadius={'30px'} src={chicken} h={"100%"} w={"100%"} objectFit={"cover"} />
           </Box>
         </Slider>
